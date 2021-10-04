@@ -1,0 +1,113 @@
+{
+    "Users":
+    {
+        "83gBMjaCOgRhDxn1dtVFbm4wGYO2":
+        {
+            "Exchange":
+            {
+                "BinanceApi":
+                {
+                    "ApiKey": "CCaqtM4DCfjQHef43zKMZxUysx7sB3J6R0H62lVJwnqFyC3u0ArWJAa8TRzZveAA",
+                    "SecretKey": "M26uMaOSC9D9p7m5ZTskv34BiOFWy70CMcqe5Gx3ms4X2S0HntOC4QfAWJCpxaAo"
+                },
+                "IndodaxApi":
+                {
+                    "ApiKey": "",
+                    "SecretKey": ""
+                }
+            },
+            "GeneralInfo":
+            {
+                "Name": "Iwan Nadapdap",
+                "BirthDay": "28 Feb 1977",
+                "country": "Indonesia",
+                "language": "English"
+            },
+            "ActiveTrade":
+            {
+                "BTC-USDT":
+                {
+                    "MarginCall":
+                    {
+                        "Level":7,
+                        "Setting":
+                        {
+                            "1":
+                            {
+                                "Rate":2,
+                                "BuyMultiplier": 2
+                            },
+                            "2":
+                            {
+                                "Rate":4,
+                                "BuyMultiplier": 4
+                            },
+                            "3":
+                            {
+                                "Rate":6,
+                                "BuyMultiplier": 8
+                            },
+                            "4":
+                            {
+                                "Rate":8,
+                                "BuyMultiplier": 16
+                            },                            
+                            "5":
+                            {
+                                "Rate":10,
+                                "BuyMultiplier": 32
+                            },                            
+                            "6":
+                            {
+                                "Rate":12,
+                                "BuyMultiplier": 64
+                            },
+                            "7":
+                            {
+                                "Rate":14,
+                                "BuyMultiplier": 128
+                            }
+
+                        }
+                    }
+                },
+                "ETH-USDT":
+                {
+
+                }
+            },
+            "Robot":
+            {
+                "Enable": true,
+                "Status": 1,
+                "ErrCode": 0
+            },
+            "UpLine":
+            {
+                "ReferralCode": "",
+                "SupportId": ""
+            },
+            "Asset":
+            {
+                "GasFee": 100
+            },
+            "Profit":
+            {
+                "Total": 100,
+                "Today": 1,
+                "ThisWeek":10,
+                "ThisMonth":70
+            },
+            "Messages":
+            {
+                
+            }
+        }
+    },
+    "CountryList":
+    {
+        "1": "Indonesia",
+        "2": "United States"
+    }
+
+}

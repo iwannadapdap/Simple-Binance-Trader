@@ -363,7 +363,7 @@ class BotCore():
         ## Setup the trader objects and start them.
         logging.info('[BotCore] Starting the trader objects.')
         
-        #breakpoint()
+        breakpoint()
         for trader_ in self.trader_objects:
             currSymbol = "{0}{1}".format(trader_.base_asset, trader_.quote_asset)
 

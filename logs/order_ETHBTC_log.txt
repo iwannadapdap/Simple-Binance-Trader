@@ -1,0 +1,5 @@
+BuyTime:2021-08-28 20:09:25, BuyPrice:0.06623400, BuyQuantity:0.03010000, BuyType:LONG entry signal 1, SellTime:2021-08-28 20:27:14, SellPrice:0.06622000, SellQuantity:0.03010000, SellType:LONG exit signal 1, Outcome:-0.00000042
+BuyTime:2021-08-28 20:37:49, BuyPrice:0.06623300, BuyQuantity:0.03010000, BuyType:LONG entry signal 1, SellTime:2021-08-28 21:04:41, SellPrice:0.06629400, SellQuantity:0.03010000, SellType:LONG exit signal 1, Outcome:0.00000184
+BuyTime:2021-08-28 21:12:03, BuyPrice:0.06631100, BuyQuantity:0.03010000, BuyType:LONG entry signal 1, SellTime:2021-08-28 21:19:08, SellPrice:0.06624700, SellQuantity:0.03010000, SellType:LONG exit signal 1, Outcome:-0.00000193
+BuyTime:2021-08-28 21:31:02, BuyPrice:0.06621900, BuyQuantity:0.03010000, BuyType:LONG entry signal 1, SellTime:2021-08-30 13:11:32, SellPrice:0.06607900, SellQuantity:0.03010000, SellType:LONG exit signal 1, Outcome:-0.00000421
+BuyTime:2021-08-30 13:40:35, BuyPrice:0.06609700, BuyQuantity:0.03020000, BuyType:LONG entry signal 1, SellTime:2021-08-30 13:48:12, SellPrice:0.06607200, SellQuantity:0.03020000, SellType:LONG exit signal 1, Outcome:-0.00000075
