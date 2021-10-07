@@ -107,8 +107,8 @@ def long_entry_conditions(custom_conditional_data, trade_information, indicators
     macd = indicators['macd']
     ema200 = indicators['ema']['ema200']
 
-    if (candles[0][4] > ema200[0]):
-        if macd[0]['macd'] > macd[1]['macd']:
+    if (candles[0][4] > ema200[0]): #iwan: if the close price of candles[0] is higher than ema200[0]
+        if macd[0]['macd'] > macd[1]['macd']: #if macd going down
             order_point += 1
             if macd[1]['hist'] > macd[0]['hist']:
                 return({'side':'BUY',

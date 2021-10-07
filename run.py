@@ -2,6 +2,13 @@
 import os
 import logging
 from core import botCore
+import firebase_admin
+from firebase_admin import credentials
+# Import the Firebase service
+from firebase_admin import auth
+from firebase_admin import db
+import json
+from firebase_user import *
 
 ## Setup    
 cwd = os.getcwd()
@@ -98,6 +105,35 @@ def settings_reader():
     return(settings_file_data)
 
 
+#functino to read firebase user setting
+def firebase_reader():
+    ## Setup settings file object with initial default variables.
+    settings_file_data = {'public_key':'', 'private_key':'', 'host_ip':'127.0.0.1', 'host_port':5000, 'max_candles':500,'max_depth':50}
+
+    _user = FirebaseUser("83gBMjaCOgRhDxn1dtVFbm4wGYO2")
+
+    settings_file_data.update({'update_bnb_balance':_user.user.get("UpdateBnbBalance")})
+    settings_file_data.update({'public_key':_user.user.get("Exchange").get("BinanceApi").get("ApiKey")})
+    settings_file_data.update({'private_key':_user.user.get("Exchange").get("BinanceApi").get("SecretKey")})
+    settings_file_data.update({'market_type':_user.user.get("MarketType")})
+    settings_file_data.update({'trader_interval':_user.user.get("TraderInterval")})
+    settings_file_data.update({'run_type':_user.user.get("RunType")})
+    settings_file_data.update({'trading_currency':_user.user.get("TradingCurrency")})
+
+    #build each coin
+    activeTrade = _user.user.get("ActiveTrade")
+    if(activeTrade != None):
+        a = {}
+        key = "trading_markets"
+        a.setdefault(key, [])
+        for coin in activeTrade:
+            a[key].append(coin)
+        
+        settings_file_data.update(a)
+    
+    return(settings_file_data)
+
+
 if __name__ == '__main__':
 
     ## Check and make cache/logs dir.
@@ -108,7 +144,8 @@ if __name__ == '__main__':
 
     ## Load settings/create settings file.
     if os.path.exists(SETTINGS_FILE_NAME):
-        settings = settings_reader()
+        #settings = settings_reader()
+        settings = firebase_reader()
         botCore.start(settings, LOGS_DIR, CACHE_DIR)
     else:
         with open(SETTINGS_FILE_NAME, 'w') as f:

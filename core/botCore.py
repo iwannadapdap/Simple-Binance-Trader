@@ -339,6 +339,8 @@ class BotCore():
         # Load the wallets.
         if self.run_type == 'REAL':
             user_info = self.rest_api.get_account(self.market_type)
+            #iwan: todo: check if this request is successfull. 
+            #one case is request is ahead of time, and binance return error 'code':-1021 'msg':"Timestamp for this request was 1000ms ahead of the server's time.
             if self.market_type == 'SPOT':
                 wallet_balances = user_info['balances']
             elif self.market_type == 'MARGIN':
